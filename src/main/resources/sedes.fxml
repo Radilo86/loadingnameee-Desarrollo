@@ -36,7 +36,7 @@
       <Label layoutX="420.0" layoutY="183.0" text="Telefono:" />
       <Label layoutX="420.0" layoutY="239.0" text="Id:" />
       <Button fx:id="AñadirSedeBtn" layoutX="419.0" layoutY="310.0" mnemonicParsing="false" onAction="#addSede" prefHeight="25.0" prefWidth="59.0" text="Añadir" />
-      <Button fx:id="BuscarSedeBtn" layoutX="502.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Buscar" />
+      <Button fx:id="BuscarSedeBtn" layoutX="502.0" layoutY="310.0" mnemonicParsing="false" onAction="#buscarSede" prefHeight="25.0" prefWidth="68.0" text="Buscar" />
       <Button fx:id="EliminarSedeBtn" layoutX="420.0" layoutY="348.0" mnemonicParsing="false" onAction="#eliminarSede" text="Eliminar" />
       <Button fx:id="ActualizarSedeBtn" layoutX="502.0" layoutY="348.0" mnemonicParsing="false" onAction="#actualizarSede" text="Actualizar" />
    </children>

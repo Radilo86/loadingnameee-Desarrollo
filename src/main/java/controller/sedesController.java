@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -28,7 +29,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class sedesController {
+public class sedesController implements Initializable {
 
 
     private Stage stage;
@@ -105,6 +106,39 @@ public class sedesController {
         verSedes();
     }
 
+    @FXML
+    public void buscarSede(){
+        Crud crud = new Crud();
+        Sedes s = new Sedes();
+        s.setIdSede(Integer.parseInt(IdSedeTxtField.getText()));
+
+        NombreSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Nombre"));
+        DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Direccion"));
+        MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("Mts"));
+        TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Telefono"));
+        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes,Integer>("id_sede"));
+
+        List<Sedes> sedesLista= new ArrayList<Sedes>();
+
+        Object ob = crud.leer(s);
+
+        if(ob==null){
+            System.out.println("Ob es NULL");
+        }
+
+        Sedes buscado = (Sedes)ob;
+
+        sedesLista.add(buscado);
+
+        if (sedesLista==null){
+            System.out.println("La lista es null!!");
+        }
+
+        sedes = FXCollections.observableArrayList(sedesLista);
+
+        TablaSedes.setItems(sedes);
+    }
+
     public void volver(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getClassLoader().getResource("Main.fxml"));
         stage =(Stage)((Node)event.getSource()).getScene().getWindow();
@@ -123,7 +157,7 @@ public class sedesController {
         DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Direccion"));
         MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("Mts"));
         TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Telefono"));
-        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes,Integer>("Id"));
+        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes,Integer>("id_sede"));
 
         List<Sedes> listaSede = new ArrayList<Sedes>();
 
@@ -143,5 +177,4 @@ public class sedesController {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         verSedes();
     }
-
 }
