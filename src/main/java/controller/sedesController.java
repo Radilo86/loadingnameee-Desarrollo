@@ -86,6 +86,7 @@ public class sedesController implements Initializable {
         Crud crud = new Crud();
         crud.crear(s);
         verSedes();
+        limpiarForm();
     }
 
     @FXML
@@ -95,6 +96,15 @@ public class sedesController implements Initializable {
         Crud crud = new Crud();
         crud.borrar(s);
         verSedes();
+        limpiarForm();
+    }
+
+    public void limpiarForm(){
+        NombreSedeTxtField.clear();
+        DireccionSedeTxtField.clear();
+        MtsSedeTxtField.clear();
+        TelefonoSedeTxtField.clear();
+        IdSedeTxtField.clear();
     }
 
     @FXML
@@ -104,6 +114,7 @@ public class sedesController implements Initializable {
         Crud crud = new Crud();
         crud.actualizar(s);
         verSedes();
+        limpiarForm();
     }
 
     @FXML
@@ -116,7 +127,7 @@ public class sedesController implements Initializable {
         DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("direccion"));
         MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("mts"));
         TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("telefono"));
-        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes,Integer>("id_sede"));
+        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("id_sede"));
 
         List<Sedes> sedesLista= new ArrayList<Sedes>();
 
@@ -137,6 +148,8 @@ public class sedesController implements Initializable {
         sedes = FXCollections.observableArrayList(sedesLista);
 
         TablaSedes.setItems(sedes);
+
+        limpiarForm();
     }
 
     public void volver(ActionEvent event) throws IOException {
@@ -157,7 +170,8 @@ public class sedesController implements Initializable {
         DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("direccion"));
         MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("mts"));
         TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("telefono"));
-        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes,Integer>("id_sede"));
+        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("id"));
+
 
         List<Sedes> listaSede = new ArrayList<Sedes>();
 
@@ -171,6 +185,8 @@ public class sedesController implements Initializable {
         sedes = FXCollections.observableArrayList(listaSede);
 
         TablaSedes.setItems(sedes);
+
+        limpiarForm();
     }
 
 

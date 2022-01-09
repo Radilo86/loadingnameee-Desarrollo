@@ -18,11 +18,11 @@
       </Button>
       <TableView fx:id="TablaSedes" layoutY="14.0" prefHeight="321.0" prefWidth="398.0">
         <columns>
-          <TableColumn fx:id="NombreSedeCol" prefWidth="115.0" text="Nombre" />
-          <TableColumn fx:id="DireccionSedeCol" prefWidth="111.0" text="Direccion" />
-            <TableColumn fx:id="MtsSedeCol" prefWidth="41.0" text="Mts" />
-            <TableColumn fx:id="TelefonoSedeCol" prefWidth="63.0" text="Telefono" />
-            <TableColumn fx:id="IdSedeCol" prefWidth="67.0" text="Id" />
+          <TableColumn fx:id="NombreSedeCol" prefWidth="94.0" text="Nombre" />
+          <TableColumn fx:id="DireccionSedeCol" prefWidth="90.0" text="Direccion" />
+            <TableColumn fx:id="MtsSedeCol" prefWidth="69.0" text="Mts" />
+            <TableColumn fx:id="TelefonoSedeCol" prefWidth="62.0" text="Telefono" />
+            <TableColumn fx:id="IdSedeCol" prefWidth="79.0" text="Id" />
         </columns>
       </TableView>
       <Label layoutX="420.0" layoutY="15.0" prefHeight="20.0" prefWidth="94.0" text="Nombre:" />
