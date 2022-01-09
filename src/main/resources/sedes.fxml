@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.sedesController">
+   <children>
+      <Label layoutX="24.0" layoutY="24.0" text="Sedes">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="VolverSedeBtn" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" onAction="#volver" prefHeight="44.0" prefWidth="119.0" text="Volver">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="TablaSedes" layoutY="14.0" prefHeight="321.0" prefWidth="398.0">
+        <columns>
+          <TableColumn fx:id="NombreSedeCol" prefWidth="115.0" text="Nombre" />
+          <TableColumn fx:id="DireccionSedeCol" prefWidth="111.0" text="Direccion" />
+            <TableColumn fx:id="MtsSedeCol" prefWidth="41.0" text="Mts" />
+            <TableColumn fx:id="TelefonoSedeCol" prefWidth="63.0" text="Telefono" />
+            <TableColumn fx:id="IdSedeCol" prefWidth="67.0" text="Id" />
+        </columns>
+      </TableView>
+      <Label layoutX="420.0" layoutY="15.0" prefHeight="20.0" prefWidth="94.0" text="Nombre:" />
+      <TextField fx:id="NombreSedeTxtField" layoutX="420.0" layoutY="38.0" />
+      <TextField fx:id="DireccionSedeTxtField" layoutX="420.0" layoutY="91.0" />
+      <TextField fx:id="MtsSedeTxtField" layoutX="420.0" layoutY="147.0" />
+      <TextField fx:id="TelefonoSedeTxtField" layoutX="420.0" layoutY="204.0" />
+      <TextField fx:id="IdSedeTxtField" layoutX="420.0" layoutY="259.0" />
+      <Label layoutX="420.0" layoutY="69.0" text="Direccion:" />
+      <Label layoutX="420.0" layoutY="126.0" text="Mts:" />
+      <Label layoutX="420.0" layoutY="183.0" text="Telefono:" />
+      <Label layoutX="420.0" layoutY="239.0" text="Id:" />
+      <Button fx:id="AñadirSedeBtn" layoutX="419.0" layoutY="310.0" mnemonicParsing="false" onAction="#addSede" prefHeight="25.0" prefWidth="59.0" text="Añadir" />
+      <Button fx:id="BuscarSedeBtn" layoutX="502.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Buscar" />
+      <Button fx:id="EliminarSedeBtn" layoutX="420.0" layoutY="348.0" mnemonicParsing="false" text="Eliminar" />
+      <Button fx:id="ActualizarSedeBtn" layoutX="502.0" layoutY="348.0" mnemonicParsing="false" text="Actualizar" />
+   </children>
+</AnchorPane>
