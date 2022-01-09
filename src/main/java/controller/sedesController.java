@@ -127,7 +127,7 @@ public class sedesController implements Initializable {
         DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("direccion"));
         MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("mts"));
         TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("telefono"));
-        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("id_sede"));
+        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("id"));
 
         List<Sedes> sedesLista= new ArrayList<Sedes>();
 
@@ -173,14 +173,13 @@ public class sedesController implements Initializable {
         IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("id"));
 
 
-        List<Sedes> listaSede = new ArrayList<Sedes>();
+        List<Sedes> listaSede = crud.listar(s);
 
-        listaSede=crud.listar(s);
-
-        if (listaSede==null){
-            System.out.println("La lista es null!!");
-        }
-
+        /*
+            if (listaSede==null){
+                System.out.println("La lista es null!!");
+            }
+        */
 
         sedes = FXCollections.observableArrayList(listaSede);
 
