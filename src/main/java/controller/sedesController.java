@@ -112,10 +112,10 @@ public class sedesController implements Initializable {
         Sedes s = new Sedes();
         s.setIdSede(Integer.parseInt(IdSedeTxtField.getText()));
 
-        NombreSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Nombre"));
-        DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Direccion"));
-        MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("Mts"));
-        TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Telefono"));
+        NombreSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("nombre"));
+        DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("direccion"));
+        MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("mts"));
+        TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("telefono"));
         IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes,Integer>("id_sede"));
 
         List<Sedes> sedesLista= new ArrayList<Sedes>();
@@ -153,10 +153,10 @@ public class sedesController implements Initializable {
         Crud crud = new Crud();
         Sedes s =new Sedes();
 
-        NombreSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Nombre"));
-        DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Direccion"));
-        MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("Mts"));
-        TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("Telefono"));
+        NombreSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("nombre"));
+        DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("direccion"));
+        MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("mts"));
+        TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("telefono"));
         IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes,Integer>("id_sede"));
 
         List<Sedes> listaSede = new ArrayList<Sedes>();
