@@ -87,6 +87,24 @@ public class sedesController {
         verSedes();
     }
 
+    @FXML
+    public void eliminarSede(){
+        Sedes s = new Sedes();
+        s.setIdSede(Integer.parseInt(IdSedeTxtField.getText()));
+        Crud crud = new Crud();
+        crud.borrar(s);
+        verSedes();
+    }
+
+    @FXML
+    public void actualizarSede(){
+        Sedes s = new Sedes();
+        s.setIdSede(Integer.parseInt(IdSedeTxtField.getText()));
+        Crud crud = new Crud();
+        crud.actualizar(s);
+        verSedes();
+    }
+
     public void volver(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getClassLoader().getResource("Main.fxml"));
         stage =(Stage)((Node)event.getSource()).getScene().getWindow();
@@ -120,6 +138,7 @@ public class sedesController {
 
         TablaSedes.setItems(sedes);
     }
+
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         verSedes();

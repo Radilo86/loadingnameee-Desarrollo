@@ -61,8 +61,6 @@ public class MainController {
     public void showSedes(ActionEvent event) throws IOException {
         URL url = new File("src/main/resources/sedes.fxml").toURI().toURL();
         root = FXMLLoader.load(url);
-
-        //root = FXMLLoader.load(getClass().getClassLoader().getResource("sedes.fxml"));
         stage =(Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
