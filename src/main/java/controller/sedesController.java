@@ -127,7 +127,7 @@ public class sedesController implements Initializable {
         DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("direccion"));
         MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("mts"));
         TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("telefono"));
-        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("id"));
+        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("idSede"));
 
         List<Sedes> sedesLista= new ArrayList<Sedes>();
 
@@ -170,7 +170,7 @@ public class sedesController implements Initializable {
         DireccionSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("direccion"));
         MtsSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, BigDecimal>("mts"));
         TelefonoSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, String>("telefono"));
-        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("id"));
+        IdSedeCol.setCellValueFactory(new PropertyValueFactory<Sedes, Integer>("idSede")); // Atributo de la clase Sedes.java
 
 
         List<Sedes> listaSede = crud.listar(s);
